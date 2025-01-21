@@ -38,7 +38,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          <button className="bg-primary text-xl rounded  px-4 py-3">
+          <button className="bg-primary text-xl rounded px-4 py-3 hover:shadow-lg hover:shadow-primary hover:text-white transition-all ease-in-out duration-300">
             Download CV
           </button>
         </div>

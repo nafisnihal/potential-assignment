@@ -19,19 +19,32 @@ export default function Hero() {
           lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
           pharetra
         </p>
-        <button className="bg-primary text-xl rounded px-4 py-3 mt-6">
+        <button className="bg-primary text-xl rounded px-4 py-3 mt-6 hover:shadow-lg hover:shadow-primary hover:text-white transition-all ease-in-out duration-300">
           Hire Me
         </button>
       </div>
-      <div className="flex flex-col items-center justify-center relative">
-        <Image
-          src="/assets/hero.png"
-          alt="Hero Image"
-          width={540}
-          height={620}
-          layout="responsive"
-          loading="lazy"
-        />
+      <div className="flex flex-col items-center justify-center">
+        <div className="w-full h-[400px] lg:h-[620px] group relative cursor-pointer">
+          <Image
+            src="/assets/hero.png"
+            alt="hero image"
+            fill
+            className="object-contain opacity-100 group-hover:opacity-0 hover:delay-100 transition-all ease-in-out duration-300"
+            sizes="(max-width: 768px) 400px, 617px"
+            priority
+            quality={100}
+          />
+          <Image
+            src="/assets/about.png"
+            alt="hero hover image"
+            fill
+            className="object-contain opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300 hover:delay-100 absolute top-0"
+            sizes="(max-width: 768px) 400px, 617px"
+            priority
+            quality={100}
+          />
+          <div className="w-[375px] h-20 bg-[#FD6F0099] absolute top-20 left-[25%]" />
+        </div>
         {/* social icon */}
         <div className="mt-9 flex space-x-6">
           <a href="">
@@ -47,7 +60,6 @@ export default function Hero() {
             <Linkedin className="w-8 h-8  hover:scale-110 transition-all ease-in-out duration-300" />
           </a>
         </div>
-        <div className="w-[375px] h-20 bg-[#FD6F0099] absolute top-32" />
       </div>
     </div>
   );
