@@ -29,7 +29,7 @@ You can view the live project [here](https://potential-assignment-nn.vercel.app/
 
 1. Start the development server:
    ```sh
-   npm start
+   npm run dev
    ```
 2. Open your browser and navigate to `http://localhost:3000`.
 
