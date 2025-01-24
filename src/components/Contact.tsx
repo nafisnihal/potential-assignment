@@ -13,7 +13,7 @@ export default function Contact() {
           name="contact"
           id="contact"
           placeholder="Enter Your Email"
-          className="bg-secondaryBg text-xl p-6 rounded-xl border max-w-full md:flex-1 placeholder:text-[#797979]"
+          className="bg-secondaryBg text-black text-xl p-6 rounded-xl border max-w-full md:flex-1 placeholder:text-[#797979]"
         />
         <button
           type="submit"
