@@ -13,6 +13,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#fd6f00",
+        secondaryBg: "#F8F8F8",
+      },
+      container: {
+        center: true,
+        padding: "1rem",
       },
     },
   },

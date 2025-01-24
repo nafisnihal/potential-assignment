@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { testimonials } from "../data/data";
+import HeadingSubheading from "./shared/HeadingSubheading";
+
 interface Testimonial {
   name: string;
   role: string;
@@ -15,26 +18,6 @@ interface DragInfo {
 }
 
 export default function TestimonialsSlider() {
-  const testimonials = [
-    {
-      name: "John Doe",
-      role: "CEO",
-      image: "/assets/avatar1.png",
-      text: "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.",
-    },
-    {
-      name: "Jane Smith",
-      role: "CTO",
-      image: "/assets/avatar2.png",
-      text: "Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices. Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan.",
-    },
-    {
-      name: "Alex Johnson",
-      role: "Designer",
-      image: "/assets/avatar1.png",
-      text: "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.",
-    },
-  ];
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleDragEnd = (
@@ -82,14 +65,13 @@ export default function TestimonialsSlider() {
   };
 
   return (
-    <div className="w-full text-center pt-36">
-      <h2 className="text-6xl font-bold">Testimonials</h2>
-      <p className="text-xl pt-4 pb-16 max-w-4xl mx-auto">
-        Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
-        lectus netus in. Aliquet donec morbi convallis pretium
-      </p>
-
-      <div className="relative overflow-hidden h-[800px] md:h-[350px] flex justify-center items-center">
+    <div className="px-4 lg:px-0 w-full text-center pt-36" id="testimonials">
+      <HeadingSubheading
+        heading="Testimonials"
+        subheading=" Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+        lectus netus in. Aliquet donec morbi convallis pretium"
+      />
+      <div className="relative pt-16 overflow-hidden h-[800px] md:h-[350px] flex justify-center items-center">
         {testimonials?.map((testimonial: Testimonial, index: number) => (
           <motion.div
             key={index}
@@ -110,7 +92,7 @@ export default function TestimonialsSlider() {
               x: getSlideStyle(index).x,
             }}
           >
-            <div className="bg-[#F8F8F8] p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-6">
+            <div className="bg-secondaryBg p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-6">
               <img
                 src={testimonial?.image}
                 alt={testimonial?.name}

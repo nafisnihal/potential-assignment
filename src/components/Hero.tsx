@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="w-full">
         <p className="text-xl font-semibold">Hi I am</p>
         <p className="text-3xl text-primary font-semibold">Muhammad Umair</p>
-        <p className="w-full text-8xl font-bold">
+        <p className="w-full text-5xl md:text-8xl font-bold">
           <span className="text-left">UI & UX </span>
           <span className="block text-right">Designer</span>
         </p>
@@ -19,7 +19,7 @@ export default function Hero() {
           lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
           pharetra
         </p>
-        <button className="bg-primary text-xl rounded px-4 py-3 mt-6 hover:shadow-lg hover:shadow-primary hover:text-white transition-all ease-in-out duration-300">
+        <button className="bg-primary text-white text-xl rounded px-4 py-3 mt-6 hover:shadow-lg hover:shadow-primary transition-all ease-in-out duration-300">
           Hire Me
         </button>
       </div>
@@ -43,7 +43,7 @@ export default function Hero() {
             priority
             quality={100}
           />
-          <div className="w-[375px] h-20 bg-[#FD6F0099] absolute top-20 left-[25%]" />
+          <div className="w-full md:w-[375px] h-20 bg-[#FD6F0099] absolute top-20 md:left-[25%]" />
         </div>
         {/* social icon */}
         <div className="mt-9 flex space-x-6">

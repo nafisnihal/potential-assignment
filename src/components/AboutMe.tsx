@@ -9,10 +9,10 @@ export default function AboutMe() {
   ];
   return (
     <div
+      className="pt-[70px] container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 gap-y-4 items-center"
       id="about"
-      className="pt-[70px] container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 items-center "
     >
-      <div className="flex flex-col items-center justify-center relative">
+      <div className="flex flex-col items-center justify-center relative order-2 lg:order-1">
         <div className="w-full h-[400px] lg:h-[620px]">
           <Image
             src="/assets/about.png"
@@ -24,9 +24,9 @@ export default function AboutMe() {
             quality={100}
           />
         </div>
-        <div className="w-[375px] h-20 bg-[#FD6F0099] absolute top-32" />
+        <div className="w-full md:w-[375px] h-20 bg-[#FD6F0099] absolute top-20" />
       </div>
-      <div className="w-full">
+      <div className="w-full order-1 lg:order-2">
         <p className="text-6xl font-semibold">About Me</p>
         <p className="text-xl pt-6 text-justify">
           Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
